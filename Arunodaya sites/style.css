@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: white;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    /* overflow:scroll; */
+}
+#cursor{
+    height: 15px;
+    width: 15px;
+    background-color: #E67E22;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#blur{
+        height: 150px;
+        width: 150px;
+        background-color: #E67E22;
+        border-radius: 50%;
+        position: fixed;
+        filter: blur(15px);
+        z-index: 9;
+}
+#nav{
+    height:150px;
+    width: 100%;
+    /* background-color: #2ECC71;  */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  
+    padding: 0 80px;
+    gap: 2vw;
+    position: fixed;
+    z-index: 99;
+    
+}
+#nav img{
+    height: 70px;
+    box-shadow: 0 0 10px 6px rgba(255, 255, 255, 0.4);
+     border-radius: 100%;
+}
+#nav h4{
+    text-transform: capitalize;
+    font-weight: 400;
+}
+video{
+height:100%;
+width: 100%;
+object-fit: cover;
+position: fixed;
+z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(0 ,0 , 0, .4);
+}
+#main {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#p1 h1:hover{
+    color: #E67E22;
+
+}
+#main,#P1 h1{
+    font-size: 40px;
+    font: weight 900;
+    position:relative;
+    z-index: 10;
+    animation-name: scroll;
+    transition: all linear 0.4s;
+    color:transparent;
+    -webkit-text-stroke:  #2ECC71;
+
+    }
+#p1 h2{
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 13px;
+    margin-bottom: 18px;
+}
+#p1 p{
+    font-size: 20px;
+    font-weight: 500;
+    width:80%;
+    margin-left: 100px; 
+}
+#p1 h1::before{
+content: "SAVE. EARN. RECEIVE.";
+position: absolute;
+color:black;
+-webkit-text-stroke: 2px black;
+top: 277px;
+right: 323px;
+z-index: -1;
+}
+/* #p2{
+    height: 100vh;
+    width: -50vh;
+    z-index: 10;
+}
+#scroller{
+    white-space: nowrap;
+    background-color: red;
+}
+#scroller-1{
+    display: flex;
+    white-space: nowrap;
+
+}
+#sroller h4{
+    display: inline-block;
+}
+#scroller-2{
+    display: flex;
+    white-space: nowrap;
+} */
+@keyframes scroll {
+    from{
+        transorm:  translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
